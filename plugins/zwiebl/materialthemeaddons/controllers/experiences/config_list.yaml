@@ -1,0 +1,11 @@
+list: $/zwiebl/materialthemeaddons/models/experience/columns.yaml
+modelClass: Zwiebl\MaterialThemeAddons\Models\Experience
+title: Experiences
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'zwiebl/materialthemeaddons/experiences/update/:id'

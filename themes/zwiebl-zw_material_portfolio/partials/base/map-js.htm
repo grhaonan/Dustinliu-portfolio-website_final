@@ -1,0 +1,155 @@
+<script type="text/javascript" src='https://maps.google.com/maps/api/js?{{ this.theme.map_apikey ? "key=#{this.theme.map_apikey}&"|raw:"" }}sensor=true'></script>
+<script src="{{ 'assets/js/gmaps.js'|theme }}"></script>
+<script>
+    $( document ).ready(function() {
+        var mapStyle = [
+            {
+                "featureType": "landscape",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 50
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 40
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 20
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 30
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": -0
+                    },
+                    {
+                        "saturation": -0
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "hue": "#00baff"
+                    },
+                    {
+                        "lightness": -10
+                    },
+                    {
+                        "saturation": -95
+                    }
+                ]
+            }
+        ];
+
+        var $mapWrapper = $('#map'), draggableOp;
+
+
+        if ( jQuery.browser.mobile === true ) {
+            draggableOp = false;
+        } else {
+            draggableOp = true;
+        }
+
+        if ( $mapWrapper.length > 0 ) {
+            var map = new GMaps({
+                div: '#map',
+                lat : {{ this.theme.map_lat }},
+                lng : {{ this.theme.map_lon }},
+                scrollwheel: false,
+                draggable: draggableOp,
+                zoom: 16,
+                disableDefaultUI: true,
+                styles : mapStyle
+            });
+
+            map.addMarker({
+                lat : {{ this.theme.map_lat }},
+                lng : {{ this.theme.map_lon }},
+                icon: '{{ "/assets/images/marker-icon.png"|theme }}',
+                infoWindow: {
+                    content: '{% spaceless %}{{ this.theme.marker_desc|raw }}{% endspaceless %}'
+                }
+            });
+        }
+    });
+</script>

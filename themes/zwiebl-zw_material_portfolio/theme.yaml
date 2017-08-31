@@ -1,0 +1,11 @@
+name: 'Material Portfolio & Resume Theme'
+description: 'One Page Portfolio & Resume Theme'
+author: zwiebl.xyz
+homepage: 'https://zwiebl.xyz'
+code: zw_material_portfolio
+require:
+    - Zwiebl.MaterialThemeAddons
+    - Samuell.ContentEditor
+    - DevINX.ContactUs
+    - ToughDeveloper.ImageResizer
+form: config/fields.yaml

@@ -1,0 +1,10 @@
+name: Experiences
+form: $/zwiebl/materialthemeaddons/models/experience/fields.yaml
+modelClass: Zwiebl\MaterialThemeAddons\Models\Experience
+defaultRedirect: zwiebl/materialthemeaddons/experiences
+create:
+    redirect: 'zwiebl/materialthemeaddons/experiences/update/:id'
+    redirectClose: zwiebl/materialthemeaddons/experiences
+update:
+    redirect: zwiebl/materialthemeaddons/experiences
+    redirectClose: zwiebl/materialthemeaddons/experiences

@@ -1,0 +1,37 @@
+<div id="experienceSlider" class="clearfix card-element-wrapper">
+    {% for exp in experience %}
+    <div class="col m4 s12 zw-card wow fadeInUpSmall" data-wow-duration=".7s">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <h2 class="left-align card-title-top">{{ exp.worked_from }} - {{ exp.worked_till }}</h2>
+                {% if exp.image %}
+                    <div class="valign-wrapper card-img-wrap">
+                        <img class="activator" src="{{ exp.image.path }}" alt="">
+                    </div>
+                {% else %}
+                    <div class="valign-wrapper card-img-wrap">
+                        <img class="activator tooltipped" src="//placehold.it/400x300" alt="Placeholder Image" data-tooltip="Placeholder image. Replace it in Backend!" data-position="top">
+                    </div>
+                {% endif %}
+
+            </div>
+            <div class="card-content">
+                <span class="card-title activator brand-text">{{ exp.position_name }}<i class="mdi-navigation-more-vert right"></i></span>
+                <p>{{ exp.company_name }}</p>
+            </div>
+            <div class="card-reveal">
+                <div class="rev-title-wrap">
+                    <span class="card-title activator brand-text">{{ exp.position_name }}<i class="mdi-navigation-close right"></i></span>
+                    <p>{{ exp.company_name }}</p>
+                </div>
+                <p class="rev-content">
+                    {{ exp.description|raw }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+    <p class="flow-text center">I have no experience :(</p>
+    {% endfor %}
+</div>

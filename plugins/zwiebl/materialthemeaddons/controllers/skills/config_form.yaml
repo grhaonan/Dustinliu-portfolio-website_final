@@ -1,0 +1,10 @@
+name: Skills
+form: $/zwiebl/materialthemeaddons/models/skill/fields.yaml
+modelClass: Zwiebl\MaterialThemeAddons\Models\Skill
+defaultRedirect: zwiebl/materialthemeaddons/skills
+create:
+    redirect: 'zwiebl/materialthemeaddons/skills/update/:id'
+    redirectClose: zwiebl/materialthemeaddons/skills
+update:
+    redirect: zwiebl/materialthemeaddons/skills
+    redirectClose: zwiebl/materialthemeaddons/skills

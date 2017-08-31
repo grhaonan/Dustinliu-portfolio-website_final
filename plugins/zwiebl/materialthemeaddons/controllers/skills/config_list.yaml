@@ -1,0 +1,15 @@
+title: Skills
+modelClass: Zwiebl\MaterialThemeAddons\Models\Skill
+list: $/zwiebl/materialthemeaddons/models/skill/columns.yaml
+recordUrl: 'zwiebl/materialthemeaddons/skills/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+showSorting: 1
+defaultSort:
+    column: sort
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

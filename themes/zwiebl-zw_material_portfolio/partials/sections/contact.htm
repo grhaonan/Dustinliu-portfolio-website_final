@@ -1,0 +1,56 @@
+description = "contact section"
+==
+<section id="contact" class="scroll-section root-sec brand-bg padd-tb-120 contact-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="contact-inner">
+                <div class="col s12 card-box-wrap">
+                    <div class="row">
+                        <div class="clearfix section-head contact-text">
+                            <div class="col s12">
+                                <h2 class="title">Contact</h2>
+                                <p class="regular-text">{{ this.theme.map_address }}</p>
+                                <ul class="clearfix contact-info">
+                                    <li><a href="tel:{{ this.theme.phone }}">{{ this.theme.phone }}</a>
+                                    </li>
+                                    <li><a href="mailto:{{ this.theme.email }}">{{ this.theme.email }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="clearfix contact-form">
+
+                            <!-- Map Start -->
+                            <div class="col s12 m7">
+                                <div class="map-wrapper">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+                            <!-- Map end -->
+
+                            <!-- Contact Form start -->
+                            <div class="col s12 m5">
+                                <div class="clearfix card-panel grey lighten-5 cform-wrapper">
+                                    {% component 'zw_custom_contact_form' %}
+                                </div>
+                            </div>
+                            <!-- Contact Form end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-call-to-area">
+        <div class="container">
+            <div class="row">
+                <a href="#home"
+                   class="btn-floating btn-large button-middle call-to-home section-call-to-btn animated btn-up btn-hidden"
+                   data-section="#home">
+                    <i class="mdi-navigation-expand-less"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

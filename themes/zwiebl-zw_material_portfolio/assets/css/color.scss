@@ -1,0 +1,122 @@
+.brand-text, .brand-text i {
+  color: $themecolor !important;
+}
+
+.brand-bg,
+.sweet-alert button {
+  background-color: $themecolor !important;
+}
+
+.waves-effect.waves-brand  {
+  background-color: darken($themecolor, 20%);
+}
+
+.p-overlay {
+  background-color: lighten($themecolor, 10%);
+}
+
+.circle-loader .path {
+  stroke: $themecolor;
+}
+
+.side-nav  li.current a,
+.side-nav  li a:hover {
+  border-bottom-color: $themecolor;
+}
+
+.static-menu li i:hover,
+.static-menu li a:hover,
+.submenu-ul li a:hover,
+.home-title span,
+.about-subtitle,
+.person-about > a.btn-large,
+.about-social ul li a i,
+.skill-title,
+.skill-count,
+.single-widget ul li a,
+.single-post-content a,
+.share-post li a:hover,
+.com-title a,
+span.num {
+  color: $themecolor;
+}
+
+.singel-hr-inner,
+.hr-wrap,
+.hrc:after,
+.thumb-slides-container.owl-theme .owl-controls .owl-page.active span,
+.blog-inner .card-content a.right:hover,
+.blog-inner .card-content a.right:focus,
+.contact-form .submit-btn:hover,
+.contact-form .submit-btn:focus,
+a.tags,
+.blog-inner .card-content a.right:active {
+  background-color: $themecolor;
+}
+
+.contact-form .materialize-textarea:focus,
+.contact-form .input-box:focus {
+  border-color: $themecolor;
+  box-shadow: 0px 1px 0px $themecolor;
+}
+
+.single-post-content blockquote {
+  border-left: 5px solid $themecolor;
+}
+
+.menu-select [type="radio"]:checked + label:after {
+  border-color: $themecolor;
+  background-color: $themecolor;
+}
+
+
+@-webkit-keyframes color {
+  0%   {stroke: $themecolor;}
+  20%  {stroke: $themecolor;}
+  25%  {stroke: $themecolor;}
+  45%  {stroke: $themecolor;}
+  50%  {stroke: $themecolor;}
+  70%  {stroke: $themecolor;}
+  75%  {stroke: $themecolor;}
+  95%  {stroke: $themecolor;}
+}
+
+
+@keyframes color {
+  0%   {stroke: $themecolor;}
+  20%  {stroke: $themecolor;}
+  25%  {stroke: $themecolor;}
+  45%  {stroke: $themecolor;}
+  50%  {stroke: $themecolor;}
+  70%  {stroke: $themecolor;}
+  75%  {stroke: $themecolor;}
+  95%  {stroke: $themecolor;}
+}
+
+// Avatar Image SVG Color Override Start
+path#hemdcolor {
+  fill: $themecolor !important;
+}
+path#kragencolor {
+  fill: darken($themecolor, 5%) !important;
+}
+path#hemdrahmencolor2 {
+  fill: darken($themecolor, 8%) !important;
+}
+path#hemdrahmencolor3 {
+  fill: lighten($themecolor, 3%) !important;
+}
+path#krageninnen {
+  fill: darken($themecolor, 3%) !important;
+}
+// Avatar Image SVG Color Override End
+
+a.brand-text > span {
+  color: $themecolor;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.ct-widget .ct-ignition__button--edit {
+  background: $themecolor !important;
+}

@@ -1,0 +1,33 @@
+<!-- skills container -->
+<div class="col-sm-12 col-md-6 col-md-offset-1">
+    <div class="skill-right">
+        <div id="skillSlider" class="clearfix skill-graph">
+
+            {% for skill in skills %}
+
+                <div class="single-skill">
+                    <div class="after-li">
+                        <div class="singel-hr">
+                            <div class="singel-hr-inner" data-height="{{ skill.percent }}%">
+                                <div class="skill-visiable">
+                                    <span class="skill-title">{{ skill.name }}</span>
+                                    <div class="hr-wrap">
+                                        <div class="hrc"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="skill-count">{{ skill.percent }}%</span>
+                        </div>
+                    </div>
+                </div>
+
+            {% else %}
+            <p class="flow-text center">I have no skills :(</p>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- /skills container -->
+
+

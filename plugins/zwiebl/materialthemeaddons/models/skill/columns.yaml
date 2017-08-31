@@ -1,0 +1,11 @@
+columns:
+    name:
+        label: 'Skill Name'
+        type: text
+        searchable: true
+        sortable: true
+    percent:
+        label: Percent
+        type: number
+        searchable: true
+        sortable: true

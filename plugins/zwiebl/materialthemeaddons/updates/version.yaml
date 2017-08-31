@@ -1,0 +1,25 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created Skills Table'
+    - builder_table_create_zwiebl_materialthemeaddons_skills.php
+1.0.5:
+    - 'Add sort_order to Skills Table'
+    - builder_table_update_zwiebl_materialthemeaddons_skills_2.php
+1.0.6:
+    - 'Insert dummy data for Skills DB'
+    - seeder106.php
+1.0.7:
+    - 'Created experience Table'
+    - builder_table_create_zwiebl_materialthemeaddons_experience.php
+1.0.8:
+    - 'Insert dummy data for experience Table'
+    - seeder108.php
+1.0.9:
+    - 'Created education table'
+    - builder_table_create_zwiebl_materialthemeaddons_education.php
+1.0.10:
+    - 'seeed education data'
+    - seeder1010.php
+10.0.11:
+    - 'Fix theme settings link'

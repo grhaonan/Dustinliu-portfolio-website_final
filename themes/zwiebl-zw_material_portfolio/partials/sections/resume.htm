@@ -1,0 +1,15 @@
+description = "resume section"
+==
+<section id="resume" class="scroll-section ">
+    {% if this.theme.show_resume_skills %}
+        {% partial 'sections/resume-skills.htm' %}
+    {% endif %}
+
+    {% if this.theme.show_resume_experience %}
+        {% partial 'sections/resume-experience.htm' %}
+    {% endif %}
+
+    {% if this.theme.show_resume_education %}
+        {% partial 'sections/resume-education.htm' %}
+    {% endif %}
+</section>

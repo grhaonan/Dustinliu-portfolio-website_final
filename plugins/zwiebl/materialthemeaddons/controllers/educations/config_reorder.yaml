@@ -1,0 +1,5 @@
+title: educations
+modelClass: Zwiebl\MaterialThemeAddons\Models\Education
+nameFrom: school_name
+toolbar:
+    buttons: reorder_toolbar

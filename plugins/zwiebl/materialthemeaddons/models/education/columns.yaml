@@ -1,0 +1,18 @@
+columns:
+    sort_order:
+        label: Sorting
+        type: number
+        sortable: true
+    position_name:
+        label: 'Position Name'
+        type: text
+        searchable: true
+    school_name:
+        label: 'School Name'
+        type: text
+    worked_from:
+        label: From
+        type: text
+    worked_till:
+        label: Till
+        type: text

@@ -1,0 +1,28 @@
+plugin:
+    name: 'zwiebl.materialthemeaddons::lang.plugin.name'
+    description: 'zwiebl.materialthemeaddons::lang.plugin.description'
+    author: zwiebl
+    icon: oc-icon-plus-square
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Material Theme'
+        url: zwiebl/materialthemeaddons/skills
+        icon: icon-plus-square
+        sideMenu:
+            side-menu-skills:
+                label: Skills
+                url: zwiebl/materialthemeaddons/skills
+                icon: icon-signal
+            side-menu-experience:
+                label: Experience
+                url: zwiebl/materialthemeaddons/experiences
+                icon: icon-tasks
+            side-menu-education:
+                label: Education
+                url: zwiebl/materialthemeaddons/educations
+                icon: icon-tasks
+            side-menu-themesettings:
+                label: 'Theme Settings'
+                url: cms/themes/update/zwiebl-zw_material_portfolio
+                icon: icon-sliders

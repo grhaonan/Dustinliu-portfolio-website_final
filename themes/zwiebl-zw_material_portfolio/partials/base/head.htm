@@ -1,0 +1,32 @@
+description = "html head section"
+==
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ this.page.title }} - {{ this.theme.site_name }}</title>
+    <meta name="description" content="{{ this.page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ 'assets/images/favicon.png'|theme }}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ ['assets/css/normalize.css', 'assets/font/font-awesome/css/font-awesome.min.css',]|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/libs/materialize/css/materialize.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ ['assets/css/bootstrap.css',
+                                    'assets/css/animate.min.css',
+                                    'assets/libs/sweetalert/sweet-alert.css',
+                                    'assets/libs/owl-carousel/owl.carousel.css',
+                                    'assets/libs/owl-carousel/owl.transitions.css',
+                                    'assets/libs/owl-carousel/owl.theme.css'
+                                    ]|theme }}"/>
+
+    <link rel="stylesheet" href="{{ ['assets/css/main.css', 'assets/css/responsive.css', 'assets/css/color.scss']|theme }}">
+
+    {% styles %}
+
+    <!--[if lt IE 9]>
+    <script src="{{ 'assets/js/html5shiv.js'|theme }}"></script>
+    <![endif]-->
+    <script src="{{ 'assets/libs/jquery/jquery-2.2.4.min.js'|theme }}"></script>
+</head>

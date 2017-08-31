@@ -1,0 +1,42 @@
+fields:
+    school_name:
+        label: 'School Name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    position_name:
+        label: 'Name'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    worked_from:
+        label: 'Worked From'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    worked_till:
+        label: 'Worked Till'
+        oc.commentPosition: ''
+        span: auto
+        required: 1
+        type: text
+    description:
+        label: Description
+        size: ''
+        oc.commentPosition: ''
+        span: auto
+        type: textarea
+tabs:
+    fields:
+        image:
+            label: Image
+            type: fileupload
+            mode: image
+            imageHeight: 300
+            imageWidth: 400
+            tab: Information
+            comment: 'should be 400x300px'
+            tab: 'Tab 1'

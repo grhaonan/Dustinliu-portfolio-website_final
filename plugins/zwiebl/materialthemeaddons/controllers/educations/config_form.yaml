@@ -1,0 +1,10 @@
+name: educations
+form: $/zwiebl/materialthemeaddons/models/education/fields.yaml
+modelClass: Zwiebl\MaterialThemeAddons\Models\Education
+defaultRedirect: zwiebl/materialthemeaddons/educations
+create:
+    redirect: 'zwiebl/materialthemeaddons/educations/update/:id'
+    redirectClose: zwiebl/materialthemeaddons/educations
+update:
+    redirect: zwiebl/materialthemeaddons/educations
+    redirectClose: zwiebl/materialthemeaddons/educations

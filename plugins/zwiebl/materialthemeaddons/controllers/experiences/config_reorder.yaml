@@ -1,0 +1,5 @@
+title: Experiences
+modelClass: Zwiebl\MaterialThemeAddons\Models\Experience
+nameFrom: company_name
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,9 @@
+{% if this.theme.logo %}
+    <a href="#home" class="left brand-logo menu-smooth-scroll" data-section="#home">
+        <img src="{{ this.theme.logo|media }}" alt="{{ this.theme.site_name }} Logo">
+    </a>
+{% else %}
+    <a href="#home" class="left brand-text grey-text text-darken-2 menu-smooth-scroll" data-section="#home">
+        <span>{{ this.theme.site_name[:1] }}</span>{{ this.theme.site_name[1:] }}
+    </a>
+{% endif %}

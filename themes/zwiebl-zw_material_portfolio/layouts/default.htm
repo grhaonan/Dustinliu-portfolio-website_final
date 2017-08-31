@@ -1,0 +1,56 @@
+description = "default layout"
+==
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+{% partial 'base/head.htm' %}
+
+<body>
+    {% partial 'base/preloader.htm' %}
+    
+    <main id="app" class="main-section">
+        {% partial 'base/navigation.htm' %}
+        {% partial 'sections/home.htm' %}
+
+        {% if this.theme.show_about_section %}
+            {% partial 'sections/about.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_resume_section %}
+            {% partial 'sections/resume.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_portfolio_section %}
+            {% partial 'sections/portfolio.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_team_section %}
+            {% partial 'sections/team.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_funfacts_section %}
+            {% partial 'sections/funfacts.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_testimonial_section %}
+            {% partial 'sections/testimonial.htm' %}
+        {% endif %}
+
+        {% if this.theme.show_blog_section %}
+            {% partial 'sections/blog.htm' %}
+        {% endif %}
+
+        {% partial 'sections/contact.htm' %}
+
+        {% partial 'base/footer.htm' %}
+    </main>
+    
+    {% partial 'base/javascripts.htm' %}
+</body>
+
+</html>

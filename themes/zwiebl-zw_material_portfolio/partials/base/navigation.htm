@@ -1,0 +1,38 @@
+description = "navigation"
+==
+{# Use uploaded image as Profile Picture. Else show Placeholder! #}
+{% set profileimagepath = "" %}
+{% if this.theme.profile_picture %}
+{% set profileimagepath = this.theme.profile_picture|media %}
+{% else %}
+{% set profileimagepath = 'assets/images/person.png'|theme %}
+{% endif %}
+<header id="navigation" class="root-sec white nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="nav-inner">
+                    <nav class="primary-nav">
+                        <div class="clearfix nav-wrapper">
+                            {% partial 'base/logo.htm' %}
+                            <a href="#" data-activates="mobile-demo" class="button-collapse"><i
+                                    class="mdi-navigation-menu"></i></a>
+                            <ul class="inline-menu side-nav" id="mobile-demo">
+                                <li class="mobile-profile">
+                                    <div class="profile-inner">
+                                        <div class="pp-container">
+                                            <img src="{{ profileimagepath }}" alt="">
+                                        </div>
+                                        <h3>{{ this.theme.your_name }}</h3>
+                                        <h5>Creative UI/UX Expert</h5>
+                                    </div>
+                                </li>
+                                {% partial 'base/menu-items' %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

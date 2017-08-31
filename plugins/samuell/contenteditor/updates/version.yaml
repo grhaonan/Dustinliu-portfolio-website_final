@@ -1,0 +1,15 @@
+1.0.1: First version of ContentEditor
+1.0.2: Support for translate plugin
+1.0.3:
+    - Image upload to MediaLibrary
+    - Autocreate file if not exists
+    - Get actual component name to request
+    - Settings in backend
+1.0.4:
+    - Enabled taglist input for selecting tags
+    - Fixed some bugs
+1.0.5:
+    - Added fixture property
+    - Added tools property
+    - Added Slovak translation
+1.0.6: Fix for autocreating files for translation

@@ -1,0 +1,382 @@
+tabs:
+    fields:
+        ####################################################
+        # Tab: General Theme Features
+        ####################################################
+        section_general:
+            type: section
+            label: General Settings
+            comment: Change it to fit your needs
+            tab: General
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end (also as Text Logo if no image is set)
+            default: Materialize CSS
+            span: left
+            tab: General
+        theme_color:
+            label: Theme Color
+            span: right
+            type: colorpicker
+            assetVar: 'themecolor'
+            availableColors: ["#f44336","#E91E63","#9C27B0","#673AB7","#3F51B5","#2196F3","#009688","#8bc34a", "#FFEB3B", "#FF9800", "#795548", "#9E9E9E", "#607D8B"]
+            default: "#8bc34a"
+            tab: General
+        logo:
+            label: Logo
+            comment: Upload a logo. It should be 315x50px and no padding.
+            span: left
+            type: mediafinder
+            mode: image
+            tab: General
+        sections_section:
+            label: Enable/Disable Sections
+            type: section
+            comment: Here you can disable some sections if you don't need it.
+            tab: General
+        show_funfacts_section:
+            label: Show FunFacts Section
+            type: checkbox
+            default: true
+            span: left
+            tab: General
+        show_blog_section:
+            label: Show Blog Section
+            type: checkbox
+            default: false
+            span: left
+            tab: General
+
+        ####################################################
+        # Tab: About
+        ####################################################
+        show_about_section:
+            label: Show About Section
+            type: switch
+            default: true
+            span: left
+            tab: About
+        section_personal:
+            type: section
+            label: Personal Info
+            comment: Set your personal Info here!
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        your_name:
+            label: Your Name
+            comment: Enter your name. It is shown on several places on the page
+            default: Jane Doe
+            span: left
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        profile_picture:
+            label: Profile Picture
+            type: mediafinder
+            comment: Use your Profile Picture. It should be 360x360px
+            span: right
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        age:
+            label: Age
+            default: 23
+            span: left
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        phone:
+            label: Phone Number
+            default: '+0123456789'
+            span: right
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        email:
+            label: E-Mail
+            default: email@domain.com
+            span: left
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+        address:
+            label: Address
+            default: Vienna, Austria
+            span: right
+            tab: About
+            trigger:
+                action: show
+                field: show_about_section
+                condition: checked
+
+        ####################################################
+        # Tab: Resume
+        ####################################################
+
+        show_resume_section:
+            label: Enable Resume Section
+            type: switch
+            default: true
+            span: left
+            tab: Resume
+        show_resume_skills:
+            label: Show Skills
+            type: checkbox
+            default: true
+            span: left
+            tab: Resume
+            trigger:
+                action: show
+                field: show_resume_section
+                condition: checked
+        show_resume_experience:
+            label: Show Experience
+            default: true
+            type: checkbox
+            span: left
+            tab: Resume
+            trigger:
+                action: show
+                field: show_resume_section
+                condition: checked
+        show_resume_education:
+            label: Show Education
+            default: true
+            type: checkbox
+            span: left
+            tab: Resume
+            trigger:
+                action: show
+                field: show_resume_section
+                condition: checked
+        zw_plugin_section:
+            label: Skills, Education and Experience
+            type: section
+            tab: Resume
+        zw_plugin_partial:
+            type: partial
+            path: $/zwiebl/materialthemeaddons/partials/_plugin_links.htm
+            tab: Resume
+
+        ####################################################
+        # Tab: Portfolio
+        ####################################################
+
+        show_portfolio_section:
+            label: Show Portfolio Section
+            type: switch
+            default: true
+            span: left
+            tab: Portfolio
+
+        portfolio_categories:
+            label: Portfolio Categories
+            type: taglist
+            seperator: space
+            span: left
+            comment: Set your categories. write in small letters!
+            tab: Portfolio
+            trigger:
+                action: show
+                field: show_portfolio_section
+                condition: checked
+        portfolio_items:
+            label: Portfolio Items
+            type: repeater
+            prompt: Add a portfolio Item
+            tab: Portfolio
+            trigger:
+                action: show
+                field: show_portfolio_section
+                condition: checked
+            form:
+                fields:
+                    title:
+                        label: Item Title
+                        type: text
+                        span: left
+                    categories:
+                        label: Add Categories
+                        span: right
+                        type: text
+                        comment: Use a single space between items!
+                    desc:
+                        label: Description
+                        type: text
+                        span: left
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        comment: Choose Item Image. Be sure that all images are the same size!
+                        span: right
+                    url:
+                        label: URL
+                        type: text
+                        span: left
+
+
+
+
+        ####################################################
+        # Tab: Team
+        ####################################################
+        show_team_section:
+            label: Enable Team Section
+            type: switch
+            default: true
+            span: left
+            tab: Team
+            comment: Enable or disable Testimonals Section. It will only be displayed if you have at least one entry.
+        form_section_team:
+            type: section
+            label: Team
+            comment: Enter as many teammates you want.
+            tab: Team
+            trigger:
+                action: show
+                field: show_team_section
+                condition: checked
+        teammates:
+            type: repeater
+            tab: Team
+            prompt: Add a teammate
+            trigger:
+                action: show
+                field: show_team_section
+                condition: checked
+            form:
+                fields:
+                    name:
+                        label: Name
+                        type: text
+                        span: left
+                    position:
+                        label: Position
+                        type: text
+                        span: right
+                    comment:
+                        label: Comment at the back of the card
+                        type: text
+                        span: left
+                    image:
+                        label: Image
+                        span: left
+                        type: mediafinder
+                        mode: image
+
+        ####################################################
+        # Tab: Testimonals
+        ####################################################
+        show_testimonial_section:
+            label: Enable Testimonial Section
+            type: switch
+            default: true
+            span: left
+            tab: Testimonals
+        form_section_testimonals:
+            type: section
+            label: Testimonals
+            comment: Enter as many Testimonals you want.
+            tab: Testimonals
+            trigger:
+                action: show
+                field: show_testimonial_section
+                condition: checked
+        testimonals:
+            type: repeater
+            tab: Testimonals
+            prompt: Add a testimonal
+            trigger:
+                action: show
+                field: show_testimonial_section
+                condition: checked
+            form:
+                fields:
+                    name:
+                        label: Name
+                        span: left
+                    company:
+                        label: Company
+                        span: right
+                    comment:
+                        label: Comment
+                        type: text
+                        span: left
+                    url:
+                        label: URL
+                        type: text
+                        span: right
+                    image:
+                        label: Image
+                        comment: Square Image as the Author Avatar
+                        span: left
+                        type: mediafinder
+                        mode: image
+
+        ####################################################
+        # Tab: Map
+        ####################################################
+
+        map_lat:
+            label: Map Latitude
+            type: number
+            default: 48.208174
+            span: left
+            tab: Map
+        map_lon:
+            label: Map Longtitude
+            type: number
+            default: 16.373819
+            span: right
+            tab: Map
+        map_address:
+            label: Map Address
+            default: 'Margaretengürtel 8, 1050 Vienna, Austria'
+            tab: Map
+        map_apikey:
+            label: Google Maps API Key
+            tab: Map
+        marker_desc:
+            label: Marker Description
+            type: richeditor
+            toolbarButtons: fontSize
+            default: '<p><span style="font-size: 18px;">Material Theme<br></span>Vienna, Austria</p>'
+            size: left
+            tab: Map
+
+        ####################################################
+        # Tab: Social Links
+        ####################################################
+
+        social_links:
+            type: repeater
+            tab: Social Links
+            form:
+                fields:
+                    name:
+                        label: Name
+                        default: Facebook
+                        span: left
+                    link:
+                        label: Link
+                        default: http://facebook.com/username
+                        span: right
+                    icon:
+                        label: Icon
+                        default: facebook
+                        comment: Font Awesome Icon use name without 'fa-' prefix
+                        span: left
