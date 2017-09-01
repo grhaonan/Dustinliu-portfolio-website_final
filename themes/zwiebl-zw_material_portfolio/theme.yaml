@@ -1,7 +1,7 @@
 name: 'Material Portfolio & Resume Theme'
 description: 'One Page Portfolio & Resume Theme'
-author: zwiebl.xyz
-homepage: 'https://zwiebl.xyz'
+author: ''
+homepage: ''
 code: zw_material_portfolio
 require:
     - Zwiebl.MaterialThemeAddons
